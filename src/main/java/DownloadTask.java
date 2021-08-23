@@ -40,7 +40,7 @@ public class DownloadTask extends Task<Integer> {
             downloadProgress = ((double) totalRead / fileSize);
             //System.out.println(downloadProgress);
             updateProgress(downloadProgress, 1);
-            updateMessage( Math.ceil(downloadProgress * 100) + " %");
+            updateMessage( Math.ceil(downloadProgress * 100*10)/10.0 + " %");
 
             fileOutputStream.write(dataBuffer, 0, bytesRead);
             totalRead += bytesRead;

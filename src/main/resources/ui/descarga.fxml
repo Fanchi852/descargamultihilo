@@ -11,7 +11,7 @@
       <Pane prefHeight="87.0" prefWidth="363.0">
          <children>
             <ProgressBar fx:id="dowload_progres_bar" layoutX="14.0" layoutY="35.0" prefHeight="18.0" prefWidth="217.0" progress="0.0" />
-            <Label fx:id="file_name" layoutX="14.0" layoutY="14.0" />
+            <Label fx:id="file_name" layoutX="14.0" layoutY="14.0" text="nombre default" />
             <Label fx:id="download_percentage" layoutX="243.0" layoutY="36.0" text="porcentaje" />
             <Button fx:id="cancel_download" layoutX="308.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelDownload" prefHeight="25.0" prefWidth="68.0" text="Cancelar" />
             <Button layoutX="308.0" layoutY="39.0" mnemonicParsing="false" onAction="#deleteDownload" prefHeight="25.0" prefWidth="68.0" text="Eliminar" />
