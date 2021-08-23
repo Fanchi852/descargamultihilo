@@ -1,4 +1,5 @@
 AppController.class
+Splash.class
 DownloadTask.class
 App.class
 DownloadController.class
