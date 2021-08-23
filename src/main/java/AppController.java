@@ -49,37 +49,23 @@ public class AppController {
     public void addDownload(ActionEvent event) {
 System.out.println("appcontroller");
         if (field_text_link.getText().equals(null) || field_text_link.getText().equals("")){
-            System.out.println("a");
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            System.out.println("b");
             alert.setContentText("no has introducido un link de descarga");
-            System.out.println("c");
             alert.show();
         }else {
-            System.out.println("d");
             Map<String, String> linkAndPath = new HashMap<>();
-            System.out.println("e");
             linkAndPath.put("link", field_text_link.getText());
-            System.out.println("f");
             linkAndPath.put("path", (field_text_download_path.getText()+field_text_file_name.getText()));
-            System.out.println("g");
 
             try {
                 System.out.println("link: "+linkAndPath.get("link")+" mas path: "+linkAndPath.get("path"));
-                System.out.println("h");
                 FXMLLoader loader = new FXMLLoader();
-                System.out.println("i");
                 loader.setLocation(R.getUI("descarga.fxml"));
-                System.out.println("j");
                 DownloadController downloadController = new DownloadController(linkAndPath);
-                System.out.println("k");
                 loader.setController(downloadController);
-                System.out.println("l");
                 VBox downloadControl = loader.load();
-                System.out.println("m");
 
                 panel.getChildren().add(downloadControl);
-                System.out.println("n");
             } catch (Exception creationError) {
                 creationError.printStackTrace();
                 System.out.println(creationError);

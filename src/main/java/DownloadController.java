@@ -89,7 +89,7 @@ public class DownloadController{
                     alert.setHeaderText("Descaga Completada");
                     alert.setContentText("La descarga ha terminado de manera satisfactoria, y a sifo almacenada en la direccion "+ file.getPath());
                     alert.show();
-                    logger.info("exito al descargar, " + namefile + " en " + file.getPath());
+                    logger.info("exito al descargar, " + namefile + " en " + file.getPath() + " link: " + this.link);
 
                 }
             });
@@ -98,7 +98,7 @@ public class DownloadController{
 
         }catch (Exception error){
             System.out.println(error);
-            logger.error("error en la descarga del archivo " + file.getName());
+            logger.error("error en la descarga del archivo " + file.getName() + " link: " + this.link);
         }
     }
 
@@ -108,11 +108,11 @@ public class DownloadController{
         try {
 
             DT.cancel();
-            logger.warn("cancelada la descarga,  " + "nombre: " + file.getName() + " en " + file.getPath());
+            logger.warn("cancelada la descarga,  " + "nombre: " + file.getName() + " en " + file.getPath() + " link: " + this.link);
 
         }catch (Exception pauseError){
             System.out.println(pauseError);
-            logger.error("error en la descarga del archivo " + file.getName());
+            logger.error("error en la descarga del archivo " + file.getName() + " link: " + this.link);
         }
     }
 
